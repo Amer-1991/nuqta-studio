@@ -11,7 +11,10 @@ declare global {
   }
 }
 
-const SEND_TO = import.meta.env.VITE_GADS_SEND_TO as string | undefined;
+// وسم إجراء التحويل "نقرة واتساب" من حساب Google Ads (قيمة عامة تظهر
+// في مصدر أي صفحة تستخدمها، وليست سراً). متغير البيئة يتقدم عليها إن ضُبط.
+const DEFAULT_SEND_TO = "AW-18084109324/6gF9CN7bxeccEIy4lq9D";
+const SEND_TO = (import.meta.env.VITE_GADS_SEND_TO as string | undefined) || DEFAULT_SEND_TO;
 
 export function trackWhatsAppClick(source: string): void {
   if (typeof window === "undefined" || !window.gtag) return;
