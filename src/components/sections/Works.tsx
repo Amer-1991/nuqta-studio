@@ -19,7 +19,7 @@ const ProjectCard: React.FC<{ index: number } & TProject> = ({
       whileInView={{ opacity: 1, y: 0 }}
       viewport={{ once: true, margin: "-60px" }}
       transition={{ duration: 0.6, delay: (index % 3) * 0.08 }}
-      className="group overflow-hidden rounded-3xl border border-hairline bg-white transition-all duration-300 hover:-translate-y-1 hover:border-purple-200 hover:shadow-lift"
+      className="sv-pop group overflow-hidden rounded-3xl border border-hairline bg-white transition-all duration-300 hover:-translate-y-1 hover:border-purple-200 hover:shadow-lift"
     >
       <a
         href={sourceCodeLink}
@@ -32,7 +32,7 @@ const ProjectCard: React.FC<{ index: number } & TProject> = ({
             src={image}
             alt={name}
             loading="lazy"
-            className="h-[220px] w-full object-cover transition-transform duration-700 group-hover:scale-105"
+            className="sv-img h-[220px] w-full object-cover object-top transition-transform duration-700 group-hover:scale-105"
           />
           <div
             aria-hidden
@@ -82,7 +82,7 @@ const ProjectCard: React.FC<{ index: number } & TProject> = ({
 const Works = () => {
   return (
     <div>
-      <div className="flex flex-col items-start gap-3">
+      <div className="sv-rise flex flex-col items-start gap-3">
         <span className="eyebrow">{config.sections.works.p}</span>
         <h2 className="headline max-w-3xl">{config.sections.works.h2}</h2>
         <p className="mt-2 max-w-2xl text-lg leading-[1.7] text-muted">

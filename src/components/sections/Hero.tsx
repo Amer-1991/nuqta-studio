@@ -1,6 +1,8 @@
 import { useRef } from "react";
 import { motion, useScroll, useTransform } from "framer-motion";
 
+import { trackWhatsAppClick } from "../../utils/track";
+
 const WHATSAPP_HREF =
   "https://wa.me/966596562019?text=" +
   encodeURIComponent("مرحباً نقطة، أريد مناقشة مشروع.");
@@ -113,7 +115,7 @@ const Hero = () => {
             transition={{ duration: 0.7, delay: 0.2 }}
             className="max-w-xl text-lg font-medium leading-[1.7] text-muted md:text-xl"
           >
-            نحن استوديو نقطة — نبني منصات وتطبيقات ذكية، ونُدمج الأتمتة
+            نحن استوديو نقطة: نبني منصات وتطبيقات ذكية، ونُدمج الأتمتة
             والذكاء الاصطناعي لجعل أعمالك تعمل أسرع وأكفأ.
           </motion.p>
 
@@ -127,6 +129,7 @@ const Hero = () => {
               href={WHATSAPP_HREF}
               target="_blank"
               rel="noopener noreferrer"
+              onClick={() => trackWhatsAppClick("hero_cta")}
               className="btn-primary"
             >
               ابدأ مشروعك

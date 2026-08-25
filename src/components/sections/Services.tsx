@@ -17,11 +17,11 @@ const serviceMeta: { description: string; accent: string }[] = [
     accent: "from-purple-500 to-purple-700",
   },
   {
-    description: "تطبيقات iOS وAndroid عبر React Native — أداء أصيل وكود واحد.",
+    description: "تطبيقات iOS وAndroid عبر React Native: أداء أصيل وكود واحد.",
     accent: "from-purple-400 to-purple-600",
   },
   {
-    description: "تجارب 3D تفاعلية داخل المتصفح — Three.js وWebXR.",
+    description: "تجارب 3D تفاعلية داخل المتصفح عبر Three.js وWebXR.",
     accent: "from-purple-600 to-purple-800",
   },
   {
@@ -36,7 +36,7 @@ const ServiceCard = ({ index, title, description, icon }: ServiceCardProps) => (
     whileInView={{ opacity: 1, y: 0 }}
     viewport={{ once: true, margin: "-80px" }}
     transition={{ duration: 0.6, delay: index * 0.08 }}
-    className="group relative overflow-hidden rounded-3xl border border-hairline bg-white p-8 transition-all duration-300 hover:-translate-y-1 hover:border-purple-200 hover:shadow-lift"
+    className="sv-pop group relative overflow-hidden rounded-3xl border border-hairline bg-white p-8 transition-all duration-300 hover:-translate-y-1 hover:border-purple-200 hover:shadow-lift"
   >
     {/* Corner gradient */}
     <div
@@ -82,7 +82,7 @@ const ServiceCard = ({ index, title, description, icon }: ServiceCardProps) => (
 const Services = () => {
   return (
     <div>
-      <div className="flex flex-col items-start gap-3">
+      <div className="sv-rise flex flex-col items-start gap-3">
         <span className="eyebrow">{config.sections.services.p}</span>
         <h2 className="headline max-w-3xl">
           {config.sections.services.h2}

@@ -1,6 +1,7 @@
 import { useEffect, useState } from "react";
 
 import { navLinks } from "../../constants";
+import { trackWhatsAppClick } from "../../utils/track";
 
 const WHATSAPP_HREF = "https://wa.me/966596562019?text=" + encodeURIComponent(
   "مرحباً نقطة، أريد مناقشة مشروع."
@@ -91,7 +92,13 @@ const Navbar = () => {
             </a>
           </li>
           <li>
-            <a href={WHATSAPP_HREF} target="_blank" rel="noopener noreferrer" className="btn-primary px-5 py-2.5 text-sm">
+            <a
+              href={WHATSAPP_HREF}
+              target="_blank"
+              rel="noopener noreferrer"
+              onClick={() => trackWhatsAppClick("navbar_cta")}
+              className="btn-primary px-5 py-2.5 text-sm"
+            >
               ابدأ مشروعك
             </a>
           </li>
@@ -147,7 +154,10 @@ const Navbar = () => {
               target="_blank"
               rel="noopener noreferrer"
               className="btn-primary mt-2 w-full"
-              onClick={() => setToggle(false)}
+              onClick={() => {
+                setToggle(false);
+                trackWhatsAppClick("navbar_mobile_cta");
+              }}
             >
               ابدأ مشروعك
             </a>

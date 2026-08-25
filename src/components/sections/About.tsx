@@ -25,7 +25,7 @@ const About = () => {
           <div className="relative h-full w-full overflow-hidden rounded-full border-4 border-white shadow-lift">
             <img
               src={amerProfile}
-              alt="عامر الودعاني — مؤسس استوديو نقطة"
+              alt="عامر الودعاني، مؤسس استوديو نقطة"
               loading="lazy"
               className="h-full w-full object-cover"
             />
@@ -54,14 +54,14 @@ const About = () => {
             {config.sections.about.content}
           </p>
           <p className="max-w-2xl text-lg leading-[1.8] text-muted">
-            يقود الاستوديو <strong className="text-ink">عامر الودعاني</strong>{" "}
-            — مطوّر فول-ستاك بخبرة 15+ سنة في الويب والموبايل وتجارب AR/VR
+            يقود الاستوديو <strong className="text-ink">عامر الودعاني</strong>،
+            مطوّر فول-ستاك بخبرة 15+ سنة في الويب والموبايل وتجارب AR/VR
             وألعاب Unreal Engine. نعمل بنموذج "فريق مركّز" بدل الوكالات الضخمة.
           </p>
         </div>
 
-        {/* Capabilities — flat chip list, no timeline */}
-        <div className="mt-2 flex flex-wrap gap-2">
+        {/* Capabilities: flat chip list, no timeline */}
+        <div className="sv-rise mt-2 flex flex-wrap gap-2">
           {[
             "تطبيقات ويب",
             "تطبيقات جوال",

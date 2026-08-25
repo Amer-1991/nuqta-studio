@@ -3,15 +3,10 @@ import { motion } from "framer-motion";
 
 import { SectionWrapper } from "../../hoc";
 import { config } from "../../constants/config";
+import { trackWhatsAppClick } from "../../utils/track";
 
 const WHATSAPP_NUMBER = "966596562019";
 const INITIAL_STATE = { name: "", email: "", mobile: "", message: "" };
-
-declare global {
-  interface Window {
-    gtag?: (...args: unknown[]) => void;
-  }
-}
 
 const Contact = () => {
   const [form, setForm] = useState(INITIAL_STATE);
@@ -31,26 +26,17 @@ const Contact = () => {
     const msg = [
       "مرحباً نقطة،",
       "",
-      `الاسم: ${form.name || "—"}`,
+      `الاسم: ${form.name || "لم يُذكر"}`,
       form.email ? `البريد: ${form.email}` : "",
       form.mobile ? `الهاتف: ${form.mobile}` : "",
       "",
       "فكرة المشروع:",
-      form.message || "—",
+      form.message || "لم تُذكر",
     ]
       .filter(Boolean)
       .join("\n");
 
-    // Fire conversion + custom event
-    if (typeof window !== "undefined" && window.gtag) {
-      window.gtag("event", "conversion", {
-        send_to: "AW-18105891921/REPLACE_WITH_LABEL",
-      });
-      window.gtag("event", "whatsapp_click", {
-        event_category: "engagement",
-        event_label: "contact_form",
-      });
-    }
+    trackWhatsAppClick("contact_form");
 
     const url = `https://wa.me/${WHATSAPP_NUMBER}?text=${encodeURIComponent(msg)}`;
     window.open(url, "_blank");
@@ -81,6 +67,7 @@ const Contact = () => {
           )}`}
           target="_blank"
           rel="noopener noreferrer"
+          onClick={() => trackWhatsAppClick("contact_direct")}
           className="inline-flex items-center gap-2.5 rounded-full bg-[#25D366] px-6 py-3 font-bold text-white shadow-soft transition-transform hover:scale-[1.02]"
         >
           <svg width="20" height="20" viewBox="0 0 24 24" fill="currentColor" aria-hidden="true">
@@ -103,7 +90,7 @@ const Contact = () => {
         viewport={{ once: true, margin: "-60px" }}
         transition={{ duration: 0.6, delay: 0.1 }}
         onSubmit={handleSubmit}
-        className="flex flex-col gap-5 rounded-3xl border border-hairline bg-white p-7 shadow-soft md:p-9"
+        className="sv-pop flex flex-col gap-5 rounded-3xl border border-hairline bg-white p-7 shadow-soft md:p-9"
       >
         {(["name", "email", "mobile"] as const).map((f) => {
           const field = config.contact.form[f];

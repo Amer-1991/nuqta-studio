@@ -1,4 +1,5 @@
 import { navLinks } from "../../constants";
+import { trackWhatsAppClick } from "../../utils/track";
 
 const Footer = () => {
   return (
@@ -71,6 +72,7 @@ const Footer = () => {
                   href="https://wa.me/966596562019"
                   target="_blank"
                   rel="noopener noreferrer"
+                  onClick={() => trackWhatsAppClick("footer_phone")}
                   dir="ltr"
                 >
                   +966 596 562 019
@@ -82,7 +84,7 @@ const Footer = () => {
         </div>
 
         <div className="mt-10 flex flex-col items-start justify-between gap-3 border-t border-hairline pt-6 text-xs text-muted md:flex-row md:items-center">
-          <span>© {new Date().getFullYear()} استوديو نقطة — Nuqta Dev Studio. جميع الحقوق محفوظة.</span>
+          <span>© {new Date().getFullYear()} استوديو نقطة · Nuqta Dev Studio. جميع الحقوق محفوظة.</span>
           <span className="inline-flex items-center gap-1.5">
             <span className="h-1.5 w-1.5 rounded-full bg-purple-500" />
             صُنع بعناية في <strong className="text-ink">السعودية</strong>

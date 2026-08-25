@@ -5,7 +5,7 @@ const Tech = () => {
   const list = [...technologies, ...technologies];
   return (
     <section className="border-y border-hairline bg-white py-12 md:py-16">
-      <div className="container-px mb-8 flex flex-col items-start gap-2">
+      <div className="sv-rise container-px mb-8 flex flex-col items-start gap-2">
         <span className="eyebrow">تقنياتنا</span>
         <h3 className="font-ar text-xl font-black text-ink md:text-2xl">
           نعمل بأحدث أدوات الصناعة

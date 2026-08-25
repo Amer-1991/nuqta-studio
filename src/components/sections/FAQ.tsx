@@ -43,11 +43,11 @@ const FAQ = () => {
 
   return (
     <div>
-      <div className="flex flex-col items-start gap-3">
+      <div className="sv-rise flex flex-col items-start gap-3">
         <span className="eyebrow">الأسئلة الشائعة</span>
         <h2 className="headline max-w-3xl">كل ما تحتاج معرفته قبل البدء.</h2>
         <p className="mt-2 max-w-2xl text-lg leading-[1.7] text-muted">
-          أجوبة شفافة عن الأسئلة الأكثر شيوعاً. إن لم تجد إجابتك — راسلنا مباشرة
+          أجوبة شفافة عن الأسئلة الأكثر شيوعاً. إن لم تجد إجابتك، راسلنا مباشرة
           عبر واتساب.
         </p>
       </div>

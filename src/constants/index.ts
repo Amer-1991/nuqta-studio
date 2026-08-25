@@ -1,11 +1,4 @@
-import type {
-  TNavLink,
-  TService,
-  TTechnology,
-  TExperience,
-  TTestimonial,
-  TProject,
-} from "../types";
+import type { TNavLink, TService, TTechnology, TProject } from "../types";
 
 import {
   mobile,
@@ -24,14 +17,13 @@ import {
   git,
   figma,
   docker,
-  meta,
-  starbucks,
-  tesla,
-  shopify,
-  carrent,
-  jobit,
-  tripguide,
   threejs,
+  workHalaai,
+  workHalafit,
+  workBal,
+  workNafis,
+  workHalaflow,
+  workHalasites,
 } from "../assets";
 
 export const navLinks: TNavLink[] = [
@@ -65,130 +57,76 @@ const technologies: TTechnology[] = [
   { name: "Git", icon: git },
 ];
 
-const experiences: TExperience[] = [
-  {
-    title: "تجارب AR/VR تفاعلية",
-    companyName: "Nuqta Studio",
-    icon: starbucks,
-    iconBg: "#EDE9FE",
-    date: "2020 — الآن",
-    points: [
-      "بناء تجارب واقع معزز/افتراضي باستخدام Unity وWebXR.",
-      "دمج AR في تطبيقات الويب والموبايل عبر Three.js.",
-      "تحسين الأداء على أجهزة Oculus وVive.",
-    ],
-  },
-  {
-    title: "ألعاب ثلاثية الأبعاد — Unreal Engine",
-    companyName: "Nuqta Studio",
-    icon: tesla,
-    iconBg: "#F5F3FF",
-    date: "2021 — الآن",
-    points: [
-      "تطوير ألعاب 3D باستخدام Unreal Engine 5.",
-      "برمجة ميكانيكا اللعب وأنظمة التفاعل.",
-      "تحسين الأداء والرسومات والإضاءة.",
-    ],
-  },
-  {
-    title: "تصميم 3D — Blender",
-    companyName: "Nuqta Studio",
-    icon: shopify,
-    iconBg: "#EDE9FE",
-    date: "2022 — الآن",
-    points: [
-      "نمذجة ثلاثية الأبعاد عالية الجودة.",
-      "تصميم شخصيات وبيئات للألعاب والويب.",
-      "رسوم متحركة واقعية لسلاسل المنتجات.",
-    ],
-  },
-  {
-    title: "منصات Full-Stack",
-    companyName: "Nuqta Studio",
-    icon: meta,
-    iconBg: "#F5F3FF",
-    date: "2023 — الآن",
-    points: [
-      "بناء تطبيقات ويب كاملة بـ React وNode.js.",
-      "دمج أنظمة الدفع والمصادقة وإدارة المستخدمين.",
-      "قيادة مشاريع تقنية معقدة من الفكرة إلى الإطلاق.",
-    ],
-  },
-];
-
-// Testimonials empty until real client permissions are collected.
-const testimonials: TTestimonial[] = [];
-
+// منتجات حقيقية من الاستوديو، بلقطات فعلية من كل منصة.
 const projects: TProject[] = [
   {
-    name: "منصة هلا AI",
+    name: "هلا AI",
     description:
-      "مساعد ذكاء اصطناعي متعدد المستأجرين مع صوت مباشر، تكامل Groq/OpenAI ودعم منصات التجارة (سلة، زد).",
+      "مساعد ذكي يدير محادثات عملائك على واتساب على مدار الساعة: يرد، يبيع، ويتكامل مع منصات التجارة مثل سلة وزد.",
     tags: [
-      { name: "Python", color: "text-purple-700" },
-      { name: "FastAPI", color: "text-purple-600" },
-      { name: "AI", color: "text-purple-500" },
+      { name: "AI", color: "text-purple-700" },
+      { name: "WhatsApp", color: "text-purple-600" },
+      { name: "FastAPI", color: "text-purple-500" },
     ],
-    image: carrent,
+    image: workHalaai,
     sourceCodeLink: "https://nuqta-studio.com/#contact",
   },
   {
-    name: "هلا AI — الموقع التعريفي",
+    name: "هلا سايتس",
     description:
-      "صفحة تعريفية لمنتجات ذكاء اصطناعي في التجارة الإلكترونية والتعليم — تصميم وتطوير.",
-    tags: [
-      { name: "React", color: "text-purple-700" },
-      { name: "Tailwind", color: "text-purple-600" },
-    ],
-    image: jobit,
-    sourceCodeLink: "https://nuqta-studio.com/#contact",
-  },
-  {
-    name: "Token Finance",
-    description:
-      "منصة تمويل بلوكتشين: NestJS + Next.js + Solidity. إدارة توكنات، محافظ، وعقود ذكية.",
-    tags: [
-      { name: "NestJS", color: "text-purple-700" },
-      { name: "Solidity", color: "text-purple-600" },
-      { name: "Prisma", color: "text-purple-500" },
-    ],
-    image: tripguide,
-    sourceCodeLink: "https://nuqta-studio.com/#contact",
-  },
-  {
-    name: "TradeClone",
-    description:
-      "منصة تداول اجتماعي: نسخ الصفقات، محافظ، بيانات السوق الحية، وتتبّع الأرباح.",
+      "منصة مواقع جاهزة للأعمال السعودية: موقع احترافي متعدد اللغات بلوحة تحكم عربية، يُسلَّم خلال أيام لا أسابيع.",
     tags: [
       { name: "Next.js", color: "text-purple-700" },
-      { name: "Prisma", color: "text-purple-600" },
+      { name: "CMS", color: "text-purple-600" },
+      { name: "SEO", color: "text-purple-500" },
     ],
-    image: carrent,
-    sourceCodeLink: "https://nuqta-studio.com/#contact",
+    image: workHalasites,
+    sourceCodeLink: "https://site.halaai.sa",
   },
   {
-    name: "مقاول — منصة مناقصات",
+    name: "هلا فلو",
     description:
-      "Next.js 15 + tRPC + Prisma — نشر المناقصات وإدارة العطاءات لقطاع البناء السعودي.",
+      "منصة العمل المحوكم: الطلب يعرف طريقه بنفسه. مسارات اعتماد ومصفوفة صلاحيات بلا برمجة، لضبط العمليات الداخلية.",
     tags: [
       { name: "Next.js", color: "text-purple-700" },
-      { name: "tRPC", color: "text-purple-600" },
-      { name: "Prisma", color: "text-purple-500" },
+      { name: "Workflow", color: "text-purple-600" },
     ],
-    image: jobit,
+    image: workHalaflow,
     sourceCodeLink: "https://nuqta-studio.com/#contact",
   },
   {
-    name: "تجربة AR تفاعلية",
+    name: "هلا نافِس",
     description:
-      "تجربة واقع معزّز داخل المتصفح عبر Three.js وWebXR — عرض منتجات بصيغة تفاعلية.",
+      "منصة ذكاء المنافسات والمزادات: راقب الفرص الحكومية، طابقها مع نشاطك، واربح قبل منافسيك بتنبيهات فورية.",
     tags: [
-      { name: "Three.js", color: "text-purple-700" },
-      { name: "WebXR", color: "text-purple-600" },
+      { name: "AI", color: "text-purple-700" },
+      { name: "Data", color: "text-purple-600" },
     ],
-    image: tripguide,
+    image: workNafis,
+    sourceCodeLink: "https://nuqta-studio.com/#contact",
+  },
+  {
+    name: "هلا فِت",
+    description:
+      "مدرّبك الشخصي بالذكاء الاصطناعي في كل عدّة: تطبيق جوال يتابع تمارينك ويتكلم معك ويعدّل خطتك لحظة بلحظة.",
+    tags: [
+      { name: "React Native", color: "text-purple-700" },
+      { name: "AI", color: "text-purple-600" },
+    ],
+    image: workHalafit,
+    sourceCodeLink: "https://nuqta-studio.com/#contact",
+  },
+  {
+    name: "بال",
+    description:
+      "رفيق تعليمي ذكي للأطفال: طفلك يتعلّم ويتكلّم مع بال بمحادثات صوتية آمنة تناسب عمره وتنمّي لغته.",
+    tags: [
+      { name: "React Native", color: "text-purple-700" },
+      { name: "Voice AI", color: "text-purple-600" },
+    ],
+    image: workBal,
     sourceCodeLink: "https://nuqta-studio.com/#contact",
   },
 ];
 
-export { services, technologies, experiences, testimonials, projects };
+export { services, technologies, projects };
