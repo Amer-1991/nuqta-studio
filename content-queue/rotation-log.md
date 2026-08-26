@@ -36,3 +36,4 @@ The daily agent appends here after each run. Prevents repeating the same topic/p
 2026-08-19 | Twitter/X | Topic#6 | كيف تدمج الذكاء الاصطناعي في شركتك السعودية — إطار اختيار أول حالة استخدام
 2026-08-23 | LinkedIn | Topic#7 | خدمات تطوير المواقع — لماذا React للسوق السعودي ومتى لا تصلح
 2026-08-24 | Quora | Topic#8 | تطبيقات iOS / Android — React Native ومتى تصلح للسوق السعودي
+2026-08-26 | Twitter/X | Topic#9 | ذكاء اصطناعي وأتمتة — الفرق بين الأتمتة والذكاء الاصطناعي ومتى تستخدم كل واحد
