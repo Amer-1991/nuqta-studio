@@ -39,3 +39,4 @@ The daily agent appends here after each run. Prevents repeating the same topic/p
 2026-08-26 | Twitter/X | Topic#9 | ذكاء اصطناعي وأتمتة — الفرق بين الأتمتة والذكاء الاصطناعي ومتى تستخدم كل واحد
 2026-08-28 | Reddit (r/SaudiArabia) | Topic#10 | تجارب AR/VR و3D: متى يستحق الواقع المعزّز ومتى يكون حرق ميزانية
 2026-08-29 | Dalili Directory (Saudi) | Topic#11 | 5 أخطاء شائعة عند اختيار شركة تطوير المواقع
+2026-08-30 | LinkedIn | Topic#12 | كيف توفّر 40% من تكلفة مشروعك التقني: أين تتسرّب الميزانية ووفورات زائفة
